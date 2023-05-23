@@ -1,0 +1,30 @@
+.input-dark-pattern {
+    background-color: #1e1f22;
+    border-color: #1e1f22;
+    color: #c5c7cc;
+}
+
+.input-dark-pattern:focus {
+    background-color: #1e1f22;
+    border-color: #1e1f22;
+    color: #c5c7cc;
+}
+
+.button-enter-pattern {
+    --bs-gutter-x: 0;
+    --bs-gutter-y: 0;
+}
+
+.text-color-white {
+    color: #FFFFFF;
+}
+
+.text-color-dark-secondary {
+    color: #8c959d
+}
+
+.card-dark-pattern {
+    width: 32rem; 
+    background-color: #313338; 
+    color: #b5bac1
+}

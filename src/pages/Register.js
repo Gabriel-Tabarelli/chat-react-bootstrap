@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react'
 import { Container, Card, Form, Button } from 'react-bootstrap';
+import validator from 'validator'
 import '../styles.css'
 
 const Register = () => {
@@ -7,15 +8,16 @@ const Register = () => {
   const [userData, setUserData] = useState({
     nome: '',
     email: '',
-    senha: '',
+    password: '',
   });
   
+  const validator = require('validator');
   const [errors, setErrors] = useState({});
   const form = useRef(null)
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (!validateForm()) {
+    if (validateForm()) {
       console.log(userData)
     }
   };
@@ -30,6 +32,10 @@ const Register = () => {
   };
 
   const validateForm = () => {
+    // Email
+    if (!userData.email) {
+      
+    }
     const formElement = form.current;
     const formInputs = formElement.elements;
     const errors = {};
@@ -37,6 +43,7 @@ const Register = () => {
     for (let i = 0; i < formInputs.length; i++) {
       if (formInputs[i].required && !formInputs[i].value) {
         errors[formInputs[i].type] = ' ';
+        debugger
         validad = false;
       }
     }

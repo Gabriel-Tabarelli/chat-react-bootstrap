@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react'
 import { Container, Card, Form, Button } from 'react-bootstrap';
-import validator from 'validator'
+// import validator from 'validator'
 import '../styles.css'
 
 const Register = () => {
@@ -11,7 +11,7 @@ const Register = () => {
     password: '',
   });
   
-  const validator = require('validator');
+  // const validator = require('validator');
   const [errors, setErrors] = useState({});
   const form = useRef(null)
 

@@ -60,6 +60,7 @@ const ImageClound = () => {
         return validad;
     }
     // ------------------------------------------------
+    // Commit teste para web
 
     return (
         <>
@@ -68,7 +69,6 @@ const ImageClound = () => {
                     <Card.Body>
                         <Card.Title className="text-center text-color-white">Bem vindo!</Card.Title>
                         <Card.Subtitle className="mb-2 text-muted text-center text-color-dark-secondary">Esperamos que goste do site!</Card.Subtitle>
-
                         <Form ref={form} onSubmit={handleSubmit} className='mt-4' noValidate>
                             <Form.Group className="mb-3" controlId="validationCustom01">
                                 <Form.Label>E-mail</Form.Label>

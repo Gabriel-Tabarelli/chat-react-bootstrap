@@ -19,16 +19,13 @@ const ImageClound = () => {
         password: '',
     });
 
-    // const validator = require('validator');
     const [errors, setErrors] = useState({});
     const form = useRef(null)
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
         if (validateForm()) {
-            console.log("enviou!")
-
-            AwsFile.create(selectedImage)
+            AwsFile.create(userData, selectedImage)
         }
     };
 
@@ -42,10 +39,6 @@ const ImageClound = () => {
     };
 
     const validateForm = () => {
-        // Email
-        if (!userData.email) {
-
-        }
         const formElement = form.current;
         const formInputs = formElement.elements;
         const errors = {};
@@ -60,7 +53,6 @@ const ImageClound = () => {
         return validad;
     }
     // ------------------------------------------------
-    // Commit teste para web
 
     return (
         <>

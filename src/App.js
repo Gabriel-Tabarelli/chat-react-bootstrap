@@ -4,6 +4,8 @@ import Home from './pages/Home';
 import ImageClound from './pages/aws/ImageClound';
 import Login from './pages/Login'
 import Register from './pages/Register'
+import User from './pages/aws/User';
+import ListUsers from './pages/aws/ListUsers';
 
 const App = () => {
   return (
@@ -13,6 +15,8 @@ const App = () => {
         <Route path="/login" element={<Login/>}/>
         <Route path="/register" element={<Register/>}/>
         <Route path='/image' element={<ImageClound/>}/>
+        <Route path='/user' element={<User/>}/>
+        <Route path='/users' element={<ListUsers/>}/>
         <Route path="*" element={<Navigate to={"/"} />}/>
       </Routes>
     </Router>

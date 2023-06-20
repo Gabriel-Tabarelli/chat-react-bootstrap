@@ -2,9 +2,12 @@ import React, { useCallback, useState, useRef } from 'react'
 import { useDropzone } from 'react-dropzone'
 import { Button, Container, Card, Form } from 'react-bootstrap';
 import { AwsFile } from '../../services/AwsFile';
+import { useNavigate } from 'react-router-dom';
+import { AiOutlineArrowRight } from 'react-icons/ai';
 
 const ImageClound = () => {
     const [selectedImage, setSelectedImage] = useState(null);
+    const navigate = useNavigate();
 
     const onDrop = useCallback(acceptedFiles => {
         setSelectedImage(acceptedFiles[0]);
@@ -26,6 +29,7 @@ const ImageClound = () => {
         event.preventDefault();
         if (validateForm()) {
             AwsFile.create(userData, selectedImage)
+            navigate('/users')
         }
     };
 
@@ -52,10 +56,15 @@ const ImageClound = () => {
         setErrors(errors);
         return validad;
     }
+
+    const navegar = () => {
+        navigate('/users')
+    }
     // ------------------------------------------------
 
     return (
         <>
+            <AiOutlineArrowRight className='m-3 button-pattern' style={{ right: '20' }} onClick={navegar}/>
             <Container className="d-flex align-items-center justify-content-center vh-100">
                 <Card className='p-5 card-dark-pattern'>
                     <Card.Body>

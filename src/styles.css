@@ -28,3 +28,22 @@
     background-color: #313338; 
     color: #b5bac1;
 }
+
+.button-pattern {
+    position: absolute;
+    font-size: 2rem;
+    cursor: pointer;
+    position: fixed;
+}
+
+.button-pattern:hover {
+    scale: 1.2;
+}
+
+.card-hover {
+    transition-duration: 0.2s;
+}
+
+.card-hover:hover {
+    scale: 1.1;
+}
